@@ -1,4 +1,4 @@
-const stripe = require('stripe')('sk_test_51IiRkbDDFfj3QhqsDSeogK7yWzHdGryV6wAyUxPddbw2Bvx191Tn2BZvJNfCbWEwNT76ESUbtiL332Of4nM2dHXv00qfjkWH5O');
+const stripe = require('stripe')(process.env.STRIPE_KEY);
 const subscriptionModel = require('../models/subscription.model');
 
 exports.create = (req, res) => {
